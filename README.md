@@ -3,10 +3,10 @@ The monero faucet can be used as `stagenet` faucet or as `testnet` faucet.
 A faucet in general accepts a monero wallet address and returns a fraction of its own wallet's balance to the given wallet.
 
 Running faucets based on this project can be found at
-* [stagenet](https://community.xmr.to/faucet/stagenet)
-* [testnet](https://community.xmr.to/faucet/testnet)
+* [stagenet](https://melo.tools/faucet/stagenet)
+* [testnet](https://melo.tools/faucet/testnet)
 
-Visit us at https://community.xmr.to.
+Visit us at https://melo.tools.
 
 ## Getting Started
 
@@ -73,7 +73,7 @@ In `docker-compose.yml` you will find some settings, you should be familiar with
     + Makes use of [`django-environ`](https://github.com/joke2k/django-environ).
 
 #### `monero-rpc` service
-A `monero-wallet-rpc` docker image is hosted [here](https://hub.docker.com/r/xmrto/monero/). The source can be found [here](https://github.com/XMRto/monero).
+A `monero-wallet-rpc` docker image is hosted [here](https://hub.docker.com/r/melotools/monero/). The source can be found [here](https://github.com/melotools/monero).
 
 The service `monero-rpc` does not publish its port (not listening on host's localhost). The port is just exposed, which makes it available in the `faucet` service, since they are hosted within the same `docker`/`docker-compose` network.
 
@@ -300,7 +300,6 @@ This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENS
 ## Acknowledgments
 
 * [Monero project](https://github.com/monero-project/monero)
-* [XMR.to](https://xmr.to)
 
 
 ## Troubleshooting
