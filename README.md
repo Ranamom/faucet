@@ -3,10 +3,10 @@ The monero faucet can be used as `stagenet` faucet or as `testnet` faucet.
 A faucet in general accepts a monero wallet address and returns a fraction of its own wallet's balance to the given wallet.
 
 Running faucets based on this project can be found at
-* [stagenet](https://melo.tools/faucet/stagenet)
-* [testnet](https://melo.tools/faucet/testnet)
+* [stagenet](https://community.rino.io/faucet/stagenet)
+* [testnet](https://community.rino.io/faucet/testnet)
 
-Visit us at https://melo.tools.
+Visit us at https://community.rino.io.
 
 ## Getting Started
 
@@ -73,7 +73,7 @@ In `docker-compose.yml` you will find some settings, you should be familiar with
     + Makes use of [`django-environ`](https://github.com/joke2k/django-environ).
 
 #### `monero-rpc` service
-A `monero-wallet-rpc` docker image is hosted [here](https://hub.docker.com/r/melotools/monero/). The source can be found [here](https://github.com/melotools/monero).
+A `monero-wallet-rpc` docker image is hosted [here](https://hub.docker.com/r/rinocommunity/monero/). The source can be found [here](https://github.com/rino-communitys/monero).
 
 The service `monero-rpc` does not publish its port (not listening on host's localhost). The port is just exposed, which makes it available in the `faucet` service, since they are hosted within the same `docker`/`docker-compose` network.
 
@@ -120,8 +120,8 @@ The above command starts the `faucet` service as well as a `monero-wallet-rpc` s
 
 It also makes sure, the service's image is built from scratch (`--build`) and the services (docker containers) are started in the background (`-d`, daemonized).
 
-The local development environment's (`Dockerfile`) docker base image (`faucet` service) is based on `python:3.6` (`docker-compose-template.yml`).
-For production (`prod.Dockerfile`) docker base image(`faucet` service) should be based on `python:3.6-alpine` (`docker-compose-prod.yml`). Please see deployment for more information.
+The local development environment's (`Dockerfile`) docker base image (`faucet` service) is based on `python:3.9` (`docker-compose-template.yml`).
+For production (`prod.Dockerfile`) docker base image(`faucet` service) should be based on `python:3.9-alpine` (`docker-compose-prod.yml`). Please see deployment for more information.
 
 Have a look at the logs:
 * `docker-compose log -f`
@@ -271,7 +271,7 @@ Also static content will be requested from `/static/fonts/fonts.css` instead of 
 
 The services are run within docker containers.
 
-The `faucet` service is backed by `python3.6`.
+The `faucet` service is backed by `python3.9`.
 
 The virtual environment for python is created and maintained with `pipenv`.
 Specific versions are defined within `Pipfile`.
@@ -285,7 +285,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/xmrto/faucet/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/rino-community/faucet/tags).
 
 ## Authors
 
