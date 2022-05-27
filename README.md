@@ -73,7 +73,7 @@ In `docker-compose.yml` you will find some settings, you should be familiar with
     + Makes use of [`django-environ`](https://github.com/joke2k/django-environ).
 
 #### `monero-rpc` service
-A `monero-wallet-rpc` docker image is hosted [here](https://hub.docker.com/r/rinocommunity/monero/). The source can be found [here](https://github.com/rino-communitys/monero).
+A `monero-wallet-rpc` docker image is hosted [here](https://hub.docker.com/r/rinocommunity/monero/). The source can be found [here](https://github.com/rino-community/monero).
 
 The service `monero-rpc` does not publish its port (not listening on host's localhost). The port is just exposed, which makes it available in the `faucet` service, since they are hosted within the same `docker`/`docker-compose` network.
 
